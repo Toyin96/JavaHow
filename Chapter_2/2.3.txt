@@ -1,0 +1,13 @@
+a). int c,
+    int thisIsAVariable
+    int q76354
+
+b). System.out.print("Enter an integer: ");
+c).    int value = input.nextInt();
+
+d). System.out.println("This is a Java program");
+
+e). System.out.printf("This is a Java%n program");
+
+f). if (int number != 7)
+ System.out.println("The variable number is not equal to 7");

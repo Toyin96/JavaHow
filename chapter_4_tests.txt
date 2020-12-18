@@ -1,0 +1,42 @@
+always code as if the guy who ends up maintaining your code will be a crazy psychopath that knows where you live.
+
+??
+
+Sentinel-controlled iteration is also known as:
+
+
+Which of the following is not represented graphically in activity diagrams for control structures?
+
+Java is considered a strongly typed language because:
+
+Which of the following code segments does not increment val by 3:
+
+What is the result value of c at the end of the following code segment?
+int c = 8;
+c++;
+++c;
+c %= 5;
+
+Which of the following terms is not used to refer to a sentinel value that breaks out of a while loop?
+
+What is output by the following Java code segment?
+int temp = 180;
+
+if (temp > 90) {
+System.out.println("This porridge is too hot.");
+
+// cool down
+temp = temp – (temp > 150 ? 100 : 20);
+}
+else {
+if (temp < 70) {
+System.out.println("This porridge is too cold.");
+
+// warm up
+temp = temp + (temp < 50 ? 30 : 20);
+}
+}
+
+if (temp == 80) {
+System.out.println("This porridge is just right!");
+}

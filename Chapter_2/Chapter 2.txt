@@ -1,0 +1,258 @@
+In chapter 2.2 of the Java: Learn how to program book, I learnt the following:
+
+   1. What a Java program is, which is a coputer program that executes when using the <i>java command</i> prompt to launch the Java virtual Machine (JVM).
+   2. Secondly, I learnt how to write my first Java program; "Welcome to Java Programming" using System.out.println statement.
+    
+
+There are three differnt commenting types in Java namely; end of line commenting (starts with //), traditional commenting(starts with /* and ends with */), and Javadoc commenting (which starts with /** and ends with */).
+
+* The // commenting type terminates at the end of the line in which it appears. By convention, its used to describe the program ie purpose of the program.
+
+** The traditional commenting can span over multiple lines. 
+eg /* This is a text printing program
+      and it can be used to print out text */
+
+NB: The compiler ignores all the texts within the delimeters (/* and */).
+
+*** The third type of commenting is the Javadoc comment. As usual the compiler ignores all texts within the delimeters. It is used to embed program documentation directly in our programs. The Javadoc utility program which is part of the JDK reads the Javadoc comments and uses them to prepare program documentation in HTML format. 
+
+NB: Forgeting one of the delimeters brings a syntax error.
+
+A syntax error when the compiler encounters a code that goes against Java's language rules. Syntax error are aclso called compile error, comple-time error, compilation error.
+
+*****Blank lines, space characters, and tabs together all make whitespace (white space).
+
+   There are two types of access modifiers ie private & public.
+
+***keywords in Java are sometimes called reserved words; meaning there are reserved for use by java and they're always spelled in lowercase.
+
+**Class Names and Identifiers
+
+By convention, class names begins with a capital letter. The first character of every word begins with a capital letter. There are no spaces. Classes cannot begin with figures. eg of a class name (MyClass , $value, Class1). Class names can contain digits, underscores (_), dollar sign($). 
+
+A class name is an identifier.
+
+****Class Body
+
+A left brace { always begins the body of every class declaration. Its a syntax error if braces does not occur in matching pairs. 
+
+**Methods are distingued by their () that comes after the identifier.
+** Methods perform tasks and can return information when they complete their tasks. 
+**Keyword void indicates that this method will not return any information. 
+**The left brace "(" begins the body of the method declaration. 
+
+In this System.out.println("Welcome to Java Programming!");
+
+** The quotation marks and the characters between them are a string — also known
+as a character string or a string literal. 
+
+**The string in the parentheses is the argument to the method.
+
+**The entire line including System.out.println, the argument "Welcome to Java Programming!" in the parentheses and the semicolon (;) is called a statement.
+
+**The System.out object is known as standard output object.
+
+** A method typically contains one or more statements that perform its task. 
+
+** In recent versions of Microsoft Windows, the command window is the Command Prompt. In UNIX/Linux/Mac OS X, the command window is called a terminal window or a shell. 
+
+******Difference between the System.out.print & System.out.println 
+
+The System.out.println completes its task, it positions the output cursor (the location where the next character will be displayed) at the beginning of the next line in the command window. 
+
+
+Displaying Multiple Lines of Text with a Single Statement
+
+**A single statement can display multiple lines by using newline characters.
+
+**Like blank lines, space characters and tab characters, newline characters are whitespace characters. Eg of newline character is \n
+
+**This sign "\" is called a backlash and it is an escape character.
+
+** Example is System.out.println("Welcome\nto\nJava\nProgramming!");
+
+The escape character which is \n allows the statement to print out as :
+
+welcome 
+to 
+java 
+programming
+
+
+Types of escape sequence
+
+**  \n newline
+
+**  \r carriage return
+
+**  \t horizontal tab: Move the screen cursor to the next tab stop.
+
+**  \\ Backslash. Used to print a backslash character
+
+**  \"  Double quote. Used to print a double-quote character. For example,
+ System.out.println("\"in quotes\"");
+
+
+Displaying Text with printf
+
+** printf means formatted and it displays formatted data.
+
+It is represented as thus:
+
+System.out.printf("%s%n%s%n%s%n%s%n%s%n", "My", "Name", "is", "Toyin", "Onagoruwa");
+
+eg include %s is a placeholder for string, %d is a placeholder for integers, %n is a placeholder for newline character etc. They are all called format specifiers. Each format specifier is a placeholder.
+
+import Declarations
+
+**A great strength of Java is its rich set of predefined classes that you can reuse rather than “reinventing the wheel.”
+
+** These classes are grouped into packages(named groups of related classes) and are collectively referred to as the Java class library, or the Java Application Programming Interface (Java API).
+
+***Remember that packages is a group of related classes
+***packages are collectively known as the Java class library
+
+*** import java.util.Scanner; is an import declaration that helps the compiler locate a class that’s used in this program.
+
+DECLARING A VARIABLE
+
+**A variable is a location in the computer’s memory where a value can be stored for use later in a program.
+
+** All Java variables must be declared with a name and a type before they can be used.
+
+Examples
+
+int sum;
+byte accountPIN;
+byte toyinAge;
+
+Scanner input = new Scanner(System.in);  ** (Cont'd) is a variable declaration statement that specifies the name (input) and type (Scanner) of a variable that’s used in this program.
+
+**The "=" indicates that Scanner variable input should be initialized (i.e., prepared for use in the program) in its declaration with the result of the expression to the right of the equals sign—new Scanner(System.in). 
+
+**initialized means prepared for use in the program 
+
+**A Scanner enables a program to read data (e.g., numbers and strings) for use in a program. 
+
+***The data can come from many sources, such as the user at the keyboard or a file on disk. Before using a Scanner, you must create it and specify the source of the data.
+
+**variable’s name can be any valid identifier — again, a series of characters consisting of letters, digits, underscores (_) and dollar signs ($) that does not begin with a digit and does not contain spaces. 
+
+**Naming variables follows the camel pattern.
+
+**A variable’s type specifies what kind of information is stored at that location in memory
+
+**Like other statements, declaration statements end with a semicolon (;). 
+
+**There are 8 types of primitive data types. They include: byte, int, long, char, short, double, float, and boolean.
+
+**the ones that represents non-decimal numbers are byte, int, long and short. While double and float represents decimal numbers.
+
+**System.out.print("Enter first integer: "); // prompt . It prompts the user to take an action.
+
+** Portions of statements that contain calculations are called expressions. In fact, an expression is any portion of a statement that has a value associated with it. 
+
+ 
+DISPLAYING THE RESULT OF THE CALCULATOR
+
+**System.out.printf("Sum is %d%n", sum); // display sum
+
+**The format specifier %d is a placeholder for an int value (in this case the value of sum)—the letter d stands for “decimal integer.”
+
+***Calculations can also be performed inside printf statements.
+
+Here is an example:
+
+System.out.printf("The sum is %d%n", (number1 + number2));
+
+NB: The parentheses around the expression number1 + number2 are optional—they’re included to emphasize that the value of the entire expression is output in the position of the %d format specifier. Such parentheses are said to be redundant.
+
+****redundant parentheses means unnecessary parentheses.
+
+***Variable names such as number1, number2 and sum actually correspond to locations in the
+computer’s memory. 
+
+**Every variable has a name, a type, a size (in bytes) and a value.
+
+**number1 = input.nextInt();
+
+**the number typed by the user is placed into a memory location corresponding to the name number1. Suppose that the user enters 45. 
+
+**The computer places that integer value into location number1, replacing the previous value (if any) in that location. The previous value is lost, so this process is said to be destructive.
+
+**When a value is read from a memory location, the process is nondestructive. 
+
+For example when we add values to int number1 and number2; if we assign another number to that location, the old value wuld be lost, which is termed destructive method. But when we carry out calculations such as addition with the variables, they are only read by the coumputer to comnpute and store in the location "sum". This means that they're left intact. This process whereby data is read from them (i.e variables (memory location)) is known as nondestructive.
+
+ARITHEMETIC
+
+** We have something called binary operators. They includes:
+
+  + addition
+  - subtraction
+  * multiplication
+  % remainder
+  / division
+  = assignment
+
+
+*** RULES
+
+*******Now, *, %, and / are given the most preferences. We call this operator precedence. if the're all represented in an equation, we give priority or start from left to right of the expression. When we say that operators are applied from left to right, we’re referring to their associativity. 
+
+*****Java applies the operators in arithmetic expressions in a precise sequence determined by the rules
+of operator precedence (p. 52).
+
+******When we say that operators are applied from left to right, we’re referring to their associativity
+(p. 52). Some operators associate from right to left.
+
+*******Addition and subtraction operations are applied next. If an expression contains several such operations, the operators are applied from left to right.
+
+*****Java has no arithmetic operator for exponentiation, so x square (x^2) is represented as x * x.
+
+******* The assignment (=) is evaluated last.
+
+**Arithmetic expressions in Java must be written in straight-line form to facilitate entering programs into the computer. Thus, expressions such as “a divided by b” must be written as a / b, so that all constants, variables and operators appear in a straight line.
+
+Parentheses for Grouping Subexpressions 
+
+***If an expression contains nested parentheses (p. 52), the innermost set is evaluated first. 
+
+y = (2 * 5 * 5) + (3 * 5) + 7
+y = 50 + 15 + 7
+y = 72
+
+DECISION MAKING: EQUALITY AND RELATIONAL OPERATORS
+
+****A condition is an expression that can be true or false. (nb: we call them condition statement)
+
+*** This section introduces Java’s if selection statement, which allows a program to make a decision based on a condition’s
+value.
+
+*** For example, the condition “grade is greater than or equal to 60” determines whether a student passed a test. If the condition in an if statement is true, the body of the if statement executes. If the condition is false, the body does not execute. We’ll see an example shortly.
+
+***conditions in if statements can be formed using two types of operators
+
+** Equality operators (for example, == is equality sign, while != means not equal to)
+
+** Relational operators (eg <, >, <=, >=)
+
+EXAMPLE 
+
+x == y means x is equal to y
+x != y means x is not equal to y
+x < y  means x is less than y
+x > y  means x is greater than y
+x <= y means x is less than or equal to y
+x >= y 
+
+** Recall that the compiler normally ignores white space
+
+****Operators  Associativity        Type
+
+    * / %      left to right       multiplicative
+    + -        left to right       additive
+    < <= > >=  left to right       relational
+    == !=      left to right       equality
+    =          right to left       assignment
+

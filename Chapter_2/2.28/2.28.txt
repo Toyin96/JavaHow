@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Chapter2 {
+
+    public static void main(String[] args) {
+
+
+
+        Scanner userInput = new Scanner (System.in);
+
+        System.out.print("Enter your radius: ");
+        double radius = userInput.nextInt();
+
+        double diameter = 2 * radius;
+        double area = Math.PI * (radius * radius);
+        double circumference = 2 * 3.14159 * radius;
+
+        System.out.printf("you result is: %n%n diameter: %.2f%n area: %.2f%n circumference: %.2f%n", diameter, area, circumference);
+
+    }
+
+
+
+
+
+
+
+}

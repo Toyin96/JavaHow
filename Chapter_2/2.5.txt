@@ -1,0 +1,51 @@
+a) State that a program will calculate the product of three integers.
+
+ANS //A program that'll calculate the product of x,y,z and output it as result.
+
+
+b) Create a Scanner called input that reads values from the standard input.
+
+ANS Scanner input = new Scanner (System.in);
+
+
+c) Declare the variables x, y, z and result to be of type int.
+
+ANS int x;
+    int y;
+    int z;
+    int result;
+
+d) Prompt the user to enter the first integer.
+
+ANS System.out.println("Enter first integer: ");
+
+e) Read the first integer from the user and store it in the variable x.
+
+ANS int x = input.nextInt();
+
+
+f) Prompt the user to enter the second integer.
+
+ANS System.out.println("Enter second integer: ");
+
+g) Read the second integer from the user and store it in the variable y.
+
+ANS int y = input.nextInt();
+
+
+h) Prompt the user to enter the third integer.
+
+ANS System.out.println("Enter third integer: ");
+
+
+i) Read the third integer from the user and store it in the variable z.
+
+ANS int z = input.nextInt();
+
+j) Compute the product of the three integers contained in variables x, y and z, and assign the result to the variable result.
+
+ANS int result = x * y * z;
+
+k) Use System.out.printf to display the message "Product is" followed by the value of the variable result.
+
+ANS System.out.printf("Product is %d", result);
