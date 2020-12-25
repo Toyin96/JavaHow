@@ -1,4 +1,4 @@
-package com.timbuchalka;
+package Chapter4;
 
 import java.util.Scanner;
 
@@ -31,11 +31,11 @@ public class Palindrome {
         return revNum;
     }
 
-    public static boolean isPalindrome (int number){
+    public static String isPalindrome (int number){
         if (number == reverseNum(number)){
-            return true;
+            return "true";
         }else{
-            return false;
+            return "false";
         }
 
     }
