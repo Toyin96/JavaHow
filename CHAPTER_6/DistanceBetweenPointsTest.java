@@ -19,7 +19,7 @@ class DistanceBetweenPointsTest {
     @Test
     void testThatMethodCanCorrectlyCalculateTheDistanceBetweenTwoPoints(){
         DistanceBetweenPoints newD = new DistanceBetweenPoints();
-        double result = newD.getDistance(12.1, 2.4,19.4, 5.7);
-        assertEquals(8.011242100947891,result);
+        double result = newD.getDistance(2,3,6, 6);
+        assertEquals(5,result);
     }
 }
