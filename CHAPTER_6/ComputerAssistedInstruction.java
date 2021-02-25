@@ -1,46 +1,63 @@
-package Chapter6;
+package Chapter6.makingADifference;
 
+import javax.swing.*;
 import java.security.SecureRandom;
-import java.util.Scanner;
 
 public class ComputerAssistedInstruction {
+    private static int random1;
+    private static int random2;
 
-    Scanner scan = new Scanner(System.in);
-    SecureRandom newRand = new SecureRandom();
+    SecureRandom random = new SecureRandom();
 
-    public void getMultiplicationExercise() {
+    public static int getRandom1() {
+        return random1;
+    }
 
-        int rand = 1 + newRand.nextInt(20);
-        int rand2 = 1 + newRand.nextInt(20);
+    public static int getRandom2() {
+        return random2;
+    }
 
-        System.out.print("How much is " + rand + " times " + rand2 + "? ");
-        int studentReply = scan.nextInt();
-        int randMultiplied = rand * rand2;
+    public int randomGenerator() {
+        return 1 + random.nextInt(9);
+    }
 
-        while (studentReply != randMultiplied) {
-            System.out.println("No. Please try again.");
+    public String questionGenerator() {
+        random1 = randomGenerator();
+        random2 = randomGenerator();
+        return String.format("what is %d times %d? enter -1 to end program", random1, random2);
+    }
 
-            System.out.print("How much is " + rand + " times " + rand2 + "? ");
-            studentReply = scan.nextInt();
-            randMultiplied = rand * rand2;
-        }
+    public int answerExtractor() {
+        return getRandom1() * getRandom2();
+    }
 
-            while (studentReply == randMultiplied) {
-                System.out.println("Very good!");
-                questionGetter();
+    public int displayQuestion() {
+        int userReply;
+        int answerExtracted;
+        String question = questionGenerator();
+        loopQuestion(question);
+        return -1;
+    }
+int loopQuestion(String question) {
+        int userReply = 0;
+        int answerExtracted;
+        while(true){
+            String answer = JOptionPane.showInputDialog(null, question);
+            userReply = Integer.parseInt(answer);
+            answerExtracted = answerExtractor();
+
+            if (userReply == -1){
+                return -1;
+            }
+
+            if (userReply != answerExtracted) {
+                JOptionPane.showMessageDialog(null, "Wrong!");
+            }
+
+            if (userReply == answerExtracted) {
+                JOptionPane.showMessageDialog(null, "Correct!");
+                question = questionGenerator();
             }
         }
-
-    public void questionGetter(){
-
-        int rand3 = 1 + newRand.nextInt(20);
-        int rand4 = 1 + newRand.nextInt(20);
-
-        System.out.print("How much is " + rand3 + " times " + rand4 + "? ");
-        int studentReply = scan.nextInt();
-
-        int randMultiplied = rand3 * rand4;
     }
 }
-
-
